@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Domashka lesson 3</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1 id="top" style="color: red;">Селекторы в CSS</h1>
+            <nav class="nav">
+                <ul class="top">
+                    <li>
+                        <a href="#vstup">Вступление</a>
+                    </li>
+                    <li>
+                        <a href="#priority">CSS Приоритеты и каскадность</a>
+                    </li>
+                    <li>
+                        <a href="">CSS селекторы</a>
+                    </li>
+                    <li>
+                        <a title="Если не понял посмотри это видео" target="_blank" href="https://www.youtube.com/watch?v=5PLinY_tOfM&list=PL7AVKPxfsCp4mr24L8gQ28UR7L88S9Z5x&index=4">
+                            Видео на десерт
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <p style="color: coral;">
+                В этой статье я постараюсь понятно объяснить что такое CSS селекторы и как использовать каждый из них. Здесь описаны все селекторы, которые нужно знать при работе с CSS.
+            </p>
+            <div class="block text">
+                <h2 id="vstup">Вступление</h2>
+                <p class="text">
+                    <mark>CSS селектор</mark>
+                    — это часть правила, с помощью которого можно выбирать HTML элементы в документе. Далее выбранный элемент можно стилизовать с помощью CSS стилей.
+                    <br>
+                    Под словом «Селектор» подразумевается один
+                    <mark>CSS селектор</mark>
+                    , например
+                    <span class="block">div, #content, :hover</span>
+                    <br>
+                    Под словом «CSS правило» подразумевается комбинация селекторов, например
+                    <span>#content .text p</span>
+                </p>
+            </div>
+            <div class="text2">
+                <h2 id="priority">CSS Приоритеты и каскадность</h2>
+                <p id="priority1">
+                    CSS — это каскадные таблицы стилей (Cascading Style Sheets).Каскадность — это главный принцип css — это приоритет одних правил/стилей над другими. Это когда одни стили перебивают другие.
+                </p>
+                <p>
+                    При вычислении приоритета браузер определяет «Вес» каждого CSS правила, который складывается из веса отдельных селекторов этого правила. Стили менее весомых правил перебиваются стилями более весомых. В результате элемент получает собранные стили от самых «весомых» правил. Все это и есть каскадность.
+                </p>
+                <p>
+                    <span class="text">Таблица</span>
+                    веса (числа) для каждого селектора:
+                </p>
+                <img title="Таблица веса для каждого селектора" src="img/scc_selector.jpg" alt="таблица css веса">
+            </div>
+            <div class="text3">
+                <p class="text3">
+                    Из правил с одинаковым весом выбираются те, которые ближе к концу HTML страницы (ниже в коде).
+                </p>
+                <p class="text3 red">
+                    Пример подсчета веса (вес представляет из себя число):
+                </p>
+                <img title="Пример" src="img/primer.JPG" alt="пример посчета">
+                <p text3>
+                    Тег
+                    <span class="teg">p</span>
+                    внутри элемента
+                    <span class="text3 red">.text</span>
+                    получит стиль
+                    <span class="text3 red">color:red;</span>
+                    , а не
+                    <span class="blue">color:blue;</span>
+                    , потому что число
+                    <span class="cifra">111</span>
+                    больше чем
+                    <span>11</span>
+                    .
+                </p>
+            </div>
+            <div class="text4">
+                <p>
+                    Считать приоритеты никогда не нужно на практике, но нужно понимать как это работают и какой из селекторов важнее остальных.
+                </p>
+            </div>
+        </main>
+        <style>
+			span{
+				color: rgb(238, 15, 219);
+				}
+        </style>
+        <footer class="footer">
+            <span>Подвал</span>
+            <p>
+                <a href="#top">На верх</a>
+            </p>
+            <div class="footer__block">
+                <p>
+                    Все права соблюденны
+                    <span>
+                        <a href="https://wp-kama.ru/id_5875/30-css-selektorov.html#css-selektory">Источник</a>
+                    </span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
